@@ -1,0 +1,11 @@
+images:
+    rust-app:
+        imageConfigHash: 58972ff78bf6fe1f8eee8f962476d9c5895bc796396a6c83a5e1ab111cdca04b
+        dockerfileHash: 88365d894a93f9e94da178efd1857144d411ed5c40c188db37d1566f36c10a15
+        contextHash: 07c4089d8b9d86f2f1f14492aab11e6fc6f60c33e8d1d2dda66557cac050cbc4
+        imageName: k3d-default-registry.localhost/thomask33/kube-scheduler-rs
+        localRegistryImageName: localhost:30935/thomask33/kube-scheduler-rs
+        tag: oRoUQrw
+lastContext:
+    namespace: devspace
+    context: k3d-default

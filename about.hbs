@@ -1,0 +1,24 @@
+# Third Party Licenses
+
+This page lists the licenses of the projects used in network-bandwidth-annotation-manager.
+
+## Third-party components
+
+| Name | Version | License |
+| ---- | ------- | ------- |
+{{#each crates}}
+| [{{package.name}}]({{#if package.repository}} {{package.repository}} {{else}} https://crates.io/crates/{{package.name}} {{/if}}) | {{package.version}} | {{license}} |
+{{/each}}
+
+## License texts
+
+{{#each licenses}}
+{{#each used_by}}
+
+### [{{crate.name}} {{crate.version}}]({{#if crate.repository}} {{crate.repository}} {{else}} https://crates.io/crates/{{crate.name}} {{/if}})
+
+{{../name}}
+
+{{../text}}
+{{/each}}
+{{/each}}

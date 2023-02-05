@@ -1,0 +1,227 @@
+{"level":"info","msg":"Inject devspacehelper...","time":"2023-02-05T15:55:51+01:00"}
+{"level":"info","msg":"Successfully injected devspacehelper into pod devspace/rust-app-devspace-6bf7cd48d6-q6bbh","time":"2023-02-05T15:55:53+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/settings.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T15:55:53+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/tasks.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T15:55:53+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/launch.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T15:55:53+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/extensions.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T15:55:53+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/*.code-snippets' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T15:55:53+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/settings.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T15:55:53+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/tasks.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T15:55:53+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/launch.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T15:55:53+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/extensions.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T15:55:53+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/*.code-snippets' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T15:55:53+01:00"}
+{"level":"info","msg":"Start syncing","time":"2023-02-05T15:55:53+01:00"}
+{"level":"info","msg":"Downstream - Initial sync completed","time":"2023-02-05T15:55:53+01:00"}
+{"level":"info","msg":"Upstream - Upload 23 create change(s) (Uncompressed ~31.45 KB)","time":"2023-02-05T15:55:54+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 23 change(s)","time":"2023-02-05T15:55:54+01:00"}
+{"level":"info","msg":"Upstream - Initial sync completed","time":"2023-02-05T15:55:55+01:00"}
+{"level":"info","msg":"Downstream - Download 23 file(s) (Uncompressed: ~39.17 KB)","time":"2023-02-05T15:56:12+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 23 change(s)","time":"2023-02-05T15:56:12+01:00"}
+{"level":"info","msg":"Downstream - Download 21 file(s) (Uncompressed: ~8594.55 KB)","time":"2023-02-05T15:56:14+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 21 change(s)","time":"2023-02-05T15:56:15+01:00"}
+{"level":"info","msg":"Inject devspacehelper...","time":"2023-02-05T16:06:28+01:00"}
+{"level":"info","msg":"Successfully injected devspacehelper into pod devspace/rust-app-devspace-6bf8d75897-jwhn5","time":"2023-02-05T16:06:30+01:00"}
+{"level":"info","msg":"Start syncing","time":"2023-02-05T16:06:30+01:00"}
+{"level":"info","msg":"Downstream - Initial sync completed","time":"2023-02-05T16:06:30+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/settings.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:06:30+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/tasks.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:06:30+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/launch.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:06:30+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/extensions.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:06:30+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/*.code-snippets' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:06:30+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/settings.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:06:30+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/tasks.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:06:30+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/launch.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:06:30+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/extensions.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:06:30+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/*.code-snippets' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:06:30+01:00"}
+{"level":"info","msg":"Start syncing","time":"2023-02-05T16:06:30+01:00"}
+{"level":"info","msg":"Downstream - Initial sync completed","time":"2023-02-05T16:06:30+01:00"}
+{"level":"info","msg":"Upstream - Upload File '.gitconfig'","time":"2023-02-05T16:06:31+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~1.06 KB)","time":"2023-02-05T16:06:31+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:06:31+01:00"}
+{"level":"info","msg":"Upstream - Upload 23 create change(s) (Uncompressed ~31.79 KB)","time":"2023-02-05T16:06:31+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 23 change(s)","time":"2023-02-05T16:06:31+01:00"}
+{"level":"info","msg":"Upstream - Initial sync completed","time":"2023-02-05T16:06:32+01:00"}
+{"level":"info","msg":"Upstream - Initial sync completed","time":"2023-02-05T16:06:33+01:00"}
+{"level":"info","msg":"Inject devspacehelper...","time":"2023-02-05T16:10:30+01:00"}
+{"level":"info","msg":"Successfully injected devspacehelper into pod devspace/rust-app-devspace-695f57fb5f-x9nxw","time":"2023-02-05T16:10:32+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/settings.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:10:32+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/tasks.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:10:32+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/launch.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:10:32+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/extensions.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:10:32+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/*.code-snippets' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:10:32+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/settings.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:10:32+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/tasks.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:10:32+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/launch.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:10:32+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/extensions.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:10:32+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/*.code-snippets' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:10:32+01:00"}
+{"level":"info","msg":"Start syncing","time":"2023-02-05T16:10:32+01:00"}
+{"level":"info","msg":"Downstream - Initial sync completed","time":"2023-02-05T16:10:32+01:00"}
+{"level":"info","msg":"Start syncing","time":"2023-02-05T16:10:32+01:00"}
+{"level":"info","msg":"Downstream - Initial sync completed","time":"2023-02-05T16:10:32+01:00"}
+{"level":"info","msg":"Upstream - Upload 23 create change(s) (Uncompressed ~31.79 KB)","time":"2023-02-05T16:10:33+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 23 change(s)","time":"2023-02-05T16:10:33+01:00"}
+{"level":"info","msg":"Upstream - Upload File '.gitconfig'","time":"2023-02-05T16:10:33+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~1.06 KB)","time":"2023-02-05T16:10:33+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:10:33+01:00"}
+{"level":"info","msg":"Upstream - Initial sync completed","time":"2023-02-05T16:10:34+01:00"}
+{"level":"info","msg":"Upstream - Initial sync completed","time":"2023-02-05T16:10:34+01:00"}
+{"level":"info","msg":"Upstream - Upload File 'devspace.yaml'","time":"2023-02-05T16:11:18+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~4.18 KB)","time":"2023-02-05T16:11:18+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:11:18+01:00"}
+{"level":"info","msg":"Upstream - Upload File 'devspace.yaml'","time":"2023-02-05T16:11:20+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~4.15 KB)","time":"2023-02-05T16:11:20+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:11:20+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/settings.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:11:34+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/tasks.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:11:34+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/launch.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:11:34+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/extensions.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:11:34+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/*.code-snippets' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:11:34+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/settings.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:11:34+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/tasks.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:11:34+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/launch.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:11:34+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/extensions.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:11:34+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/*.code-snippets' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:11:34+01:00"}
+{"level":"info","msg":"Start syncing","time":"2023-02-05T16:11:34+01:00"}
+{"level":"info","msg":"Downstream - Initial sync completed","time":"2023-02-05T16:11:34+01:00"}
+{"level":"info","msg":"Start syncing","time":"2023-02-05T16:11:34+01:00"}
+{"level":"info","msg":"Downstream - Initial sync completed","time":"2023-02-05T16:11:34+01:00"}
+{"level":"info","msg":"Upstream - Initial sync completed","time":"2023-02-05T16:11:34+01:00"}
+{"level":"info","msg":"Upstream - Upload File '.gitconfig'","time":"2023-02-05T16:11:35+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~1.06 KB)","time":"2023-02-05T16:11:35+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:11:35+01:00"}
+{"level":"info","msg":"Upstream - Initial sync completed","time":"2023-02-05T16:11:36+01:00"}
+{"level":"info","msg":"Downstream - Download 23 file(s) (Uncompressed: ~39.17 KB)","time":"2023-02-05T16:12:06+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 23 change(s)","time":"2023-02-05T16:12:06+01:00"}
+{"level":"info","msg":"Downstream - Download 21 file(s) (Uncompressed: ~8594.55 KB)","time":"2023-02-05T16:12:08+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 21 change(s)","time":"2023-02-05T16:12:08+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/settings.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:13:53+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/tasks.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:13:53+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/launch.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:13:53+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/extensions.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:13:53+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/*.code-snippets' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:13:53+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/settings.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:13:53+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/tasks.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:13:53+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/launch.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:13:53+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/extensions.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:13:53+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/*.code-snippets' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:13:53+01:00"}
+{"level":"info","msg":"Start syncing","time":"2023-02-05T16:13:53+01:00"}
+{"level":"info","msg":"Downstream - Download 44 file(s) (Uncompressed: ~8633.72 KB)","time":"2023-02-05T16:13:53+01:00"}
+{"level":"info","msg":"Start syncing","time":"2023-02-05T16:13:53+01:00"}
+{"level":"info","msg":"Downstream - Initial sync completed","time":"2023-02-05T16:13:54+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 44 change(s)","time":"2023-02-05T16:13:54+01:00"}
+{"level":"info","msg":"Downstream - Initial sync completed","time":"2023-02-05T16:13:54+01:00"}
+{"level":"info","msg":"Upstream - Upload File 'devspace.yaml'","time":"2023-02-05T16:13:54+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~4.18 KB)","time":"2023-02-05T16:13:54+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:13:54+01:00"}
+{"level":"info","msg":"Upstream - Upload File '.gitconfig'","time":"2023-02-05T16:13:55+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~1.06 KB)","time":"2023-02-05T16:13:55+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:13:55+01:00"}
+{"level":"info","msg":"Upstream - Initial sync completed","time":"2023-02-05T16:13:56+01:00"}
+{"level":"info","msg":"Upstream - Initial sync completed","time":"2023-02-05T16:13:56+01:00"}
+{"level":"info","msg":"Start syncing","time":"2023-02-05T16:15:25+01:00"}
+{"level":"info","msg":"Downstream - Initial sync completed","time":"2023-02-05T16:15:25+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/settings.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:15:25+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/tasks.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:15:25+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/launch.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:15:25+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/extensions.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:15:25+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/*.code-snippets' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:15:25+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/settings.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:15:25+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/tasks.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:15:25+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/launch.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:15:25+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/extensions.json' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:15:25+01:00"}
+{"level":"warning","msg":"Exclude path '!.vscode/*.code-snippets' is not scoped to the directory base and thus requires a full initial scan. Please consider using a path in the form of '!/path/to/my/folder/' instead to improve performance","time":"2023-02-05T16:15:25+01:00"}
+{"level":"info","msg":"Start syncing","time":"2023-02-05T16:15:25+01:00"}
+{"level":"info","msg":"Downstream - Download 44 file(s) (Uncompressed: ~8633.72 KB)","time":"2023-02-05T16:15:25+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 44 change(s)","time":"2023-02-05T16:15:26+01:00"}
+{"level":"info","msg":"Downstream - Initial sync completed","time":"2023-02-05T16:15:26+01:00"}
+{"level":"info","msg":"Upstream - Upload File '.gitconfig'","time":"2023-02-05T16:15:26+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~1.06 KB)","time":"2023-02-05T16:15:26+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:15:26+01:00"}
+{"level":"info","msg":"Upstream - Upload File 'devspace.yaml'","time":"2023-02-05T16:15:26+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~4.20 KB)","time":"2023-02-05T16:15:26+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:15:26+01:00"}
+{"level":"info","msg":"Upstream - Initial sync completed","time":"2023-02-05T16:15:27+01:00"}
+{"level":"info","msg":"Upstream - Initial sync completed","time":"2023-02-05T16:15:28+01:00"}
+{"level":"info","msg":"Upstream - Upload File 'devspace.yaml'","time":"2023-02-05T16:17:46+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~4.27 KB)","time":"2023-02-05T16:17:46+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:17:46+01:00"}
+{"level":"info","msg":"Upstream - Upload File 'devspace.yaml'","time":"2023-02-05T16:18:06+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~4.22 KB)","time":"2023-02-05T16:18:06+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:18:06+01:00"}
+{"level":"info","msg":"Upstream - Upload File 'devspace.yaml'","time":"2023-02-05T16:18:15+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~4.22 KB)","time":"2023-02-05T16:18:15+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:18:15+01:00"}
+{"level":"info","msg":"Upstream - Upload File 'devspace.yaml'","time":"2023-02-05T16:19:54+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~4.13 KB)","time":"2023-02-05T16:19:54+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:19:54+01:00"}
+{"level":"info","msg":"Upstream - Upload File 'devspace.yaml'","time":"2023-02-05T16:20:07+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~4.01 KB)","time":"2023-02-05T16:20:07+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:20:07+01:00"}
+{"level":"info","msg":"Upstream - Upload File 'devspace.yaml'","time":"2023-02-05T16:20:22+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~3.79 KB)","time":"2023-02-05T16:20:22+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:20:22+01:00"}
+{"level":"info","msg":"Upstream - Upload File 'devspace.yaml'","time":"2023-02-05T16:21:35+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~3.83 KB)","time":"2023-02-05T16:21:35+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:21:35+01:00"}
+{"level":"info","msg":"Upstream - Upload File 'devspace.yaml'","time":"2023-02-05T16:21:38+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~3.79 KB)","time":"2023-02-05T16:21:38+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:21:38+01:00"}
+{"level":"info","msg":"Upstream - Upload File 'devspace.yaml'","time":"2023-02-05T16:21:44+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~3.68 KB)","time":"2023-02-05T16:21:44+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:21:44+01:00"}
+{"level":"info","msg":"Upstream - Upload File 'devspace.yaml'","time":"2023-02-05T16:22:12+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~3.59 KB)","time":"2023-02-05T16:22:12+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:22:12+01:00"}
+{"level":"info","msg":"Upstream - Upload File 'devspace.yaml'","time":"2023-02-05T16:22:15+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~3.52 KB)","time":"2023-02-05T16:22:15+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:22:15+01:00"}
+{"level":"info","msg":"Upstream - Upload File 'devspace.yaml'","time":"2023-02-05T16:22:17+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~3.44 KB)","time":"2023-02-05T16:22:17+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:22:17+01:00"}
+{"level":"info","msg":"Upstream - Upload File 'devspace.yaml'","time":"2023-02-05T16:22:22+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~3.35 KB)","time":"2023-02-05T16:22:22+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:22:22+01:00"}
+{"level":"info","msg":"Upstream - Upload File 'devspace.yaml'","time":"2023-02-05T16:22:27+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~3.08 KB)","time":"2023-02-05T16:22:27+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:22:27+01:00"}
+{"level":"info","msg":"Upstream - Upload File 'devspace.yaml'","time":"2023-02-05T16:22:31+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~2.99 KB)","time":"2023-02-05T16:22:31+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:22:31+01:00"}
+{"level":"info","msg":"Upstream - Upload File 'devspace.yaml'","time":"2023-02-05T16:22:49+01:00"}
+{"level":"info","msg":"Upstream - Upload 1 create change(s) (Uncompressed ~2.90 KB)","time":"2023-02-05T16:22:49+01:00"}
+{"level":"info","msg":"Upstream - Successfully processed 1 change(s)","time":"2023-02-05T16:22:49+01:00"}
+{"level":"info","msg":"Downstream - Download file './.vscode', uncompressed: ~0.00 KB","time":"2023-02-05T16:23:33+01:00"}
+{"level":"info","msg":"Downstream - Download file './.vscode/extensions.json', uncompressed: ~0.05 KB","time":"2023-02-05T16:23:33+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 2 change(s)","time":"2023-02-05T16:23:33+01:00"}
+{"level":"info","msg":"Downstream - Download file './.vscode/extensions.json', uncompressed: ~0.07 KB","time":"2023-02-05T16:23:36+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 1 change(s)","time":"2023-02-05T16:23:36+01:00"}
+{"level":"info","msg":"Downstream - Download file './.vscode/extensions.json', uncompressed: ~0.10 KB","time":"2023-02-05T16:23:45+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 1 change(s)","time":"2023-02-05T16:23:45+01:00"}
+{"level":"info","msg":"Downstream - Download file './.vscode/extensions.json', uncompressed: ~0.13 KB","time":"2023-02-05T16:23:49+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 1 change(s)","time":"2023-02-05T16:23:49+01:00"}
+{"level":"info","msg":"Downstream - Download file './.vscode/extensions.json', uncompressed: ~0.16 KB","time":"2023-02-05T16:23:55+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 1 change(s)","time":"2023-02-05T16:23:55+01:00"}
+{"level":"info","msg":"Downstream - Download file './.vscode/extensions.json', uncompressed: ~0.18 KB","time":"2023-02-05T16:24:02+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 1 change(s)","time":"2023-02-05T16:24:02+01:00"}
+{"level":"info","msg":"Downstream - Download file './.vscode/extensions.json', uncompressed: ~0.20 KB","time":"2023-02-05T16:24:17+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 1 change(s)","time":"2023-02-05T16:24:17+01:00"}
+{"level":"info","msg":"Downstream - Download file './.vscode/extensions.json', uncompressed: ~0.23 KB","time":"2023-02-05T16:24:26+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 1 change(s)","time":"2023-02-05T16:24:26+01:00"}
+{"level":"info","msg":"Downstream - Download file './.vscode/extensions.json', uncompressed: ~0.27 KB","time":"2023-02-05T16:24:32+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 1 change(s)","time":"2023-02-05T16:24:32+01:00"}
+{"level":"info","msg":"Downstream - Download file './.vscode/extensions.json', uncompressed: ~0.31 KB","time":"2023-02-05T16:24:44+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 1 change(s)","time":"2023-02-05T16:24:44+01:00"}
+{"level":"info","msg":"Downstream - Download 18 file(s) (Uncompressed: ~6987.52 KB)","time":"2023-02-05T16:24:46+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 18 change(s)","time":"2023-02-05T16:24:46+01:00"}
+{"level":"info","msg":"Downstream - Download file './.vscode/extensions.json', uncompressed: ~0.33 KB","time":"2023-02-05T16:24:49+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 1 change(s)","time":"2023-02-05T16:24:49+01:00"}
+{"level":"info","msg":"Downstream - Download file './.vscode/extensions.json', uncompressed: ~0.31 KB","time":"2023-02-05T16:24:55+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 1 change(s)","time":"2023-02-05T16:24:55+01:00"}
+{"level":"info","msg":"Downstream - Download file './.vscode/extensions.json', uncompressed: ~0.34 KB","time":"2023-02-05T16:25:02+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 1 change(s)","time":"2023-02-05T16:25:02+01:00"}
+{"level":"info","msg":"Downstream - Download file './.vscode/extensions.json', uncompressed: ~0.36 KB","time":"2023-02-05T16:25:16+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 1 change(s)","time":"2023-02-05T16:25:16+01:00"}
+{"level":"info","msg":"Downstream - Download file './.vscode/extensions.json', uncompressed: ~0.42 KB","time":"2023-02-05T16:25:24+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 1 change(s)","time":"2023-02-05T16:25:24+01:00"}
+{"level":"info","msg":"Downstream - Download file './.vscode/extensions.json', uncompressed: ~0.44 KB","time":"2023-02-05T16:25:42+01:00"}
+{"level":"info","msg":"Downstream - Successfully processed 1 change(s)","time":"2023-02-05T16:25:42+01:00"}

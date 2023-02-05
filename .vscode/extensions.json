@@ -1,0 +1,18 @@
+{
+	"recommendations": [
+		"serayuzgur.crates",
+		"vadimcn.vscode-lldb",
+		"editorconfig.editorconfig",
+		"tamasfe.even-better-toml",
+		"foam.foam-vscode",
+		"codezombiech.gitignore",
+		"skellock.just",
+		"yzhang.markdown-all-in-one",
+		"davidanson.vscode-markdownlint",
+		"swellaby.vscode-rust-test-adapter",
+		"hbenl.vscode-test-explorer",
+		"gruntfuggly.todo-tree",
+		"aquasecurityofficial.trivy-vulnerability-scanner",
+		"rust-lang.rust-analyzer"
+	]
+}
