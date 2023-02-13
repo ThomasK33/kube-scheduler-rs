@@ -4,30 +4,24 @@ name: kube-scheduler-rs
 vars:
   REGISTRY:
     source: env
-    default: k3d-default-registry.localhost
+    default: ghcr.io
 
 images:
-  rust-app:
+  kube-scheduler-rs:
     image: ${REGISTRY}/thomask33/kube-scheduler-rs
     dockerfile: ./Dockerfile
 
 deployments:
-  rust-app:
-    helm:
-      chart:
-        name: component-chart
-        repo: https://charts.devspace.sh
-      values:
-        containers:
-          - image: ${REGISTRY}/thomask33/kube-scheduler-rs
-        # service:
-        #   ports:
-        #     - port: 3000
+  kube-scheduler-rs:
+    kubectl:
+      manifests:
+        - deployment/kube-scheduler-rs.yaml
 
 dev:
-  rust-app:
+  kube-scheduler-rs:
     # Search for the container that runs this image
     imageSelector: ${REGISTRY}/thomask33/kube-scheduler-rs
+    namespace: kube-scheduler-rs
     # Replace the container image with this dev-optimized image (allows to skip image building during development)
     # devImage: ghcr.io/loft-sh/devspace-containers/alpine:3
     devImage: mcr.microsoft.com/devcontainers/rust:latest
@@ -54,29 +48,30 @@ dev:
       - command: k9s
       - command: helm
       - gitCredentials: true
-    # Forward the following ports to be able access your application via localhost
-    # ports:
-    #   - port: "3000"
-    # Open the following URLs once they return an HTTP status code other than 502 or 503
-    # open:
-    #   - url: http://localhost:3000
-#
+    # Resource requirements
+    resources:
+      requests:
+        cpu: "2"
+        memory: 2Gi
+
 # Use the `commands` section to define repeatable dev workflows for this project
-# commands:
-#   migrate-db:
-#     command: |-
-#       echo 'This is a cross-platform, shared command that can be used to codify any kind of dev task.'
-#       echo 'Anyone using this project can invoke it via "devspace run migrate-db"'
+commands:
+  deploy-multiple-pods:
+    command: |-
+      kubectl apply -f examples/multiple.yaml
+  deploy-single-pod:
+    command: |-
+      kubectl apply -f examples/pause.yaml
 
 pipelines:
   # This is the pipeline for the main command: `devspace dev` (or `devspace run-pipeline dev`)
   dev:
     run: |-
-      create_deployments --all     # 1. Deploy Helm charts and manifests specfied as "deployments"
-      start_dev rust-app           # 2. Start dev mode "rust-app" (see "dev" section)
+      create_deployments --all              # 1. Deploy Helm charts and manifests specfied as "deployments"
+      start_dev kube-scheduler-rs           # 2. Start dev mode "kube-scheduler-rs" (see "dev" section)
 
       # Open VSCode as soon as we are done
-      code --folder-uri vscode-remote://ssh-remote+rust-app.kube-scheduler-rs.devspace/app
+      code --folder-uri vscode-remote://ssh-remote+kube-scheduler-rs.kube-scheduler-rs.devspace/app
 
   # You can run this pipeline via `devspace deploy` (or `devspace run-pipeline deploy`)
   deploy:
