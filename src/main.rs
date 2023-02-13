@@ -16,10 +16,10 @@ struct Cli {
     #[clap(flatten)]
     verbose: clap_verbosity_flag::Verbosity<InfoLevel>,
 
-    #[arg(value_enum, long, env)]
+    #[arg(value_enum, long, env, default_value_t = Algorithm::BinPacking)]
     algorithm: Algorithm,
 
-    #[arg(long, env, default_value_t = { "kube-scheduler-rs".to_owned() })]
+    #[arg(long, env, default_value = "kube-scheduler-rs")]
     scheduler_name: String,
 
     /// Debounce duration in seconds
@@ -42,6 +42,6 @@ async fn main() -> Result<()> {
         .with_max_level(convert_filter(cli.verbose.log_level_filter()))
         .init();
 
-    tracing::info!("Launching scheduler");
+    tracing::info!("Launching scheduler: {}", env!("CARGO_PKG_VERSION"));
     run_scheduler(cli).await
 }

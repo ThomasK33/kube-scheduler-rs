@@ -54,7 +54,8 @@ pub(crate) async fn run_scheduler(cli: Cli) -> Result<()> {
         // Abort previous handle
         handle.abort();
         handle = tokio::spawn(async move {
-            // Debounce schedule invocation by one second after the last invocation of this loop
+            // Debounce schedule invocation by one second after the last invocation of this
+            // loop
             tokio::time::sleep(std::time::Duration::from_secs(cli.debounce_duration)).await;
 
             match cli.algorithm {
