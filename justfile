@@ -3,6 +3,8 @@ _default:
 
 # Run local development environment
 run: start-k3d start-devspace
+# Run local development environment in VS Code
+dev: start-k3d start-devspace-vscode
 # Stop local development environment
 stop: stop-devspace stop-k3d
 
@@ -18,7 +20,7 @@ start-k3d:
 	k3d registry create default-registry.localhost --port 9090
 	k3d cluster create default --servers 3 --registry-use k3d-default-registry.localhost:9090
 
-	kubectl create ns devspace
+	kubectl create ns kube-scheduler-rs
 
 # Delete local k3d cluster and registry
 stop-k3d:
@@ -29,8 +31,12 @@ stop-k3d:
 
 # Start a DevSpace session
 start-devspace:
-	devspace use namespace devspace
+	devspace use namespace kube-scheduler-rs
 	devspace dev
+
+start-devspace-vscode:
+	devspace use namespace kube-scheduler-rs
+	devspace run-pipeline vscode
 
 # Purge DevSpace resurces
 stop-devspace:

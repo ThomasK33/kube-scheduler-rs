@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-custom-scheduler-qos-guaranteed
+spec:
+  schedulerName: kube-scheduler-rs
+  containers:
+    - name: pause
+      image: registry.k8s.io/pause:2.0
+      resources:
+        limits:
+          memory: "200Mi"
+          cpu: "700m"
+        requests:
+          memory: "200Mi"
+          cpu: "700m"
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-custom-scheduler-qos-burstable
+spec:
+  schedulerName: kube-scheduler-rs
+  containers:
+    - name: pause
+      image: registry.k8s.io/pause:2.0
+      resources:
+        limits:
+          memory: "200Mi"
+        requests:
+          memory: "100Mi"
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-custom-scheduler-qos-best-effort
+spec:
+  schedulerName: kube-scheduler-rs
+  containers:
+    - name: pause
+      image: registry.k8s.io/pause:2.0
