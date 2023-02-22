@@ -6,4 +6,4 @@ spec:
   schedulerName: kube-scheduler-rs
   containers:
     - name: pause
-      image: registry.k8s.io/pause:2.0
+      image: registry.k8s.io/pause:3.9

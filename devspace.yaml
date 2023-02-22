@@ -23,7 +23,7 @@ dev:
     imageSelector: ${REGISTRY}/thomask33/kube-scheduler-rs
     namespace: kube-scheduler-rs
     # Replace the container image with this dev-optimized image (allows to skip image building during development)
-    devImage: ghcr.io/thomask33/devspace-containers/rust:1.67-alpine
+    devImage: ghcr.io/loft-sh/devspace-containers/rust:1.67-alpine
     # Sync files between the local filesystem and the development container
     sync:
       - path: ./
@@ -55,7 +55,6 @@ dev:
     imageSelector: ${REGISTRY}/thomask33/kube-scheduler-rs
     namespace: kube-scheduler-rs
     # Replace the container image with this dev-optimized image (allows to skip image building during development)
-    # devImage: ghcr.io/loft-sh/devspace-containers/alpine:3
     devImage: mcr.microsoft.com/devcontainers/rust:latest
     # Sync files between the local filesystem and the development container
     sync:
