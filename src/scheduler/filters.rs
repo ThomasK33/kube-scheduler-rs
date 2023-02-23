@@ -8,7 +8,12 @@ pub(crate) fn is_pod_allocatable(node: &Node, pod: &Pod) -> bool {
         //
     };
 
+    // If there is no pod.spec one cannot make any allocation related decisions
+    let Some(pod_spec) = &pod.spec else { return false };
+
     // TODO: Implement allocatable filtering
+
+    // TODO: Implement a quantity parser in a separate crate
 
     true
 }
@@ -21,6 +26,18 @@ pub(crate) fn is_node_schedulable(node: &Node) -> bool {
 pub(crate) fn is_pod_taint_toleration_fulfilled(node: &Node, pod: &Pod) -> bool {
     let Some(spec) = &node.spec else { return false };
     // TODO: Implement taint filtering
+
+    true
+}
+
+pub(crate) fn is_pod_anti_affinity_fulfilled(node: &Node, pod: &Pod) -> bool {
+    // TODO: Implement anti-affinity filtering
+
+    true
+}
+
+pub(crate) fn is_pod_affinity_fulfilled(node: &Node, pod: &Pod) -> bool {
+    // TODO: Implement affinity filtering
 
     true
 }

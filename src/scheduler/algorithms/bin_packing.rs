@@ -4,7 +4,10 @@ use kube::{api::ListParams, Api};
 
 use crate::scheduler::{
     bind_pod_to_node,
-    filters::{is_node_schedulable, is_pod_allocatable, is_pod_taint_toleration_fulfilled},
+    filters::{
+        is_node_schedulable, is_pod_affinity_fulfilled, is_pod_allocatable,
+        is_pod_anti_affinity_fulfilled, is_pod_taint_toleration_fulfilled,
+    },
     PodBindParameters, SchedulingParameters,
 };
 
@@ -50,7 +53,7 @@ pub(crate) async fn schedule(params: SchedulingParameters) -> Result<()> {
     let nodes: Api<Node> = Api::all(client.clone());
 
     for pod in unscheduled_pods {
-        // TODO: Filter out unfeasible nodes
+        // Filter out unfeasible nodes
         let feasible_nodes: Vec<Node> = nodes
             .list(&ListParams::default())
             .await?
@@ -61,13 +64,14 @@ pub(crate) async fn schedule(params: SchedulingParameters) -> Result<()> {
             .filter(|node| is_pod_allocatable(node, &pod))
             // Filter nodes fulfilling taint toleration
             .filter(|node| is_pod_taint_toleration_fulfilled(node, &pod))
-            // TODO: Filter nodes fulfilling affinities
-            // TODO: Filter nodes fulfilling anti-affinities
+            // Filter nodes fulfilling affinities
+            .filter(|node| is_pod_affinity_fulfilled(node, &pod))
+            // Filter nodes fulfilling anti-affinities
+            .filter(|node| is_pod_anti_affinity_fulfilled(node, &pod))
             .collect();
         // TODO: Score nodes
         // TODO: Normalize scores
         // TODO: Update custom state/cache of scheduled pods to nodes
-        // TODO: Bind pod to node
 
         let Some(node) = feasible_nodes.get(0) else { continue; };
         let Some(node_name) = &node.metadata.name else { continue; };
@@ -75,6 +79,7 @@ pub(crate) async fn schedule(params: SchedulingParameters) -> Result<()> {
         let Some(name) = pod.metadata.name else { continue };
         let Some(namespace) = pod.metadata.namespace else { continue };
 
+        // Bind pod to node
         let res = bind_pod_to_node(PodBindParameters {
             client: client.clone(),
             pod_name: name.clone(),

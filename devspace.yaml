@@ -88,24 +88,36 @@ dev:
 # Use the `commands` section to define repeatable dev workflows for this project
 commands:
   deploy-multiple-pods:
+    description: Deploy multiple, equivalent pods to Kubernetes
+    section: deploy
     command: |-
       kubectl apply -f examples/multiple.yaml
   deploy-single-pod:
+    description: Deploy a single pod to Kubernetes
+    section: deploy
     command: |-
       kubectl apply -f examples/pause.yaml
   deploy-qos:
+    description: Deploy three pods with different QoS to Kubernetes
+    section: deploy
     command: |-
       kubectl apply -f examples/qos.yaml
 
   redeploy-multiple-pods:
+    description: Redeploys multiple, equivalent pods to Kubernetes
+    section: redeploy
     command: |-
       kubectl delete -f examples/multiple.yaml
       kubectl apply -f examples/multiple.yaml
   redeploy-single-pod:
+    description: Redeploy a single pod to Kubernetes
+    section: redeploy
     command: |-
       kubectl delete -f examples/pause.yaml
       kubectl apply -f examples/pause.yaml
   redeploy-qos:
+    description: Redeploy three pods with different QoS to Kubernetes
+    section: redeploy
     command: |-
       kubectl delete -f examples/qos.yaml
       kubectl apply -f examples/qos.yaml
@@ -117,7 +129,12 @@ pipelines:
       create_deployments --all              # 1. Deploy Helm charts and manifests specified as "deployments"
       start_dev kube-scheduler-rs           # 2. Start dev mode "kube-scheduler-rs" (see "dev" section)
 
-  # This is the pipeline for the main command: `devspace run-pipeline vscode`
+  # This is the pipeline for stopping the dev command: `devspace run-pipeline stop`
+  stop:
+    run: |-
+      stop_dev --all
+
+  # This is the pipeline for launching the environment in vscode: `devspace run-pipeline vscode`
   vscode:
     run: |-
       create_deployments --all              # 1. Deploy Helm charts and manifests specified as "deployments"

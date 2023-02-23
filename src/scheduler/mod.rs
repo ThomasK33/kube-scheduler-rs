@@ -1,6 +1,8 @@
 mod algorithms;
 mod filters;
 
+use std::time::{Duration, Instant};
+
 use color_eyre::Result;
 use futures::{StreamExt, TryStreamExt};
 use k8s_openapi::api::core::v1::Pod;
@@ -40,6 +42,8 @@ pub(crate) async fn run_scheduler(cli: Cli) -> Result<()> {
 
     log::info!("Running reflector loop");
 
+    let mut last_run = Instant::now();
+
     let mut pod_reflector = pod_reflector.applied_objects().boxed();
     while (pod_reflector.try_next().await?).is_some() {
         let client = client.clone();
@@ -47,14 +51,22 @@ pub(crate) async fn run_scheduler(cli: Cli) -> Result<()> {
         let scheduler_name = cli.scheduler_name.clone();
         let unscheduled_lp = unscheduled_lp.clone();
 
-        // TODO: Add a timeout, after which a scheduler run is triggered anyways
+        // A timeout, after which a scheduler run is triggered anyways
+        if last_run.elapsed() < Duration::from_secs(cli.debounce_duration) {
+            // Abort previous handle
+            handle.abort();
+        } else {
+            // Wait for the previous handle to finish ignore the result
+            let _ = handle.await;
+            // Update last run time
+            last_run = Instant::now();
+        }
 
-        // Abort previous handle
-        handle.abort();
+        // Spawn a new handle
         handle = tokio::spawn(async move {
             // Debounce schedule invocation by one second after the last invocation of this
             // loop
-            tokio::time::sleep(std::time::Duration::from_secs(cli.debounce_duration)).await;
+            tokio::time::sleep(Duration::from_secs(cli.debounce_duration)).await;
 
             let params = SchedulingParameters {
                 client: client.clone(),
