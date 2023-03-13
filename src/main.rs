@@ -23,11 +23,11 @@ struct Cli {
     scheduler_name: String,
 
     /// Debounce duration in seconds
-    #[arg(short, long, env, default_value_t = 3)]
+    #[arg(long, env, default_value_t = 3)]
     debounce_duration: u64,
 
     /// Debounce timeout in seconds after which a scheduler run is triggered anyways
-    #[arg(short, long, env, default_value_t = 10)]
+    #[arg(long, env, default_value_t = 10)]
     debounce_timeout: u64,
 }
 
