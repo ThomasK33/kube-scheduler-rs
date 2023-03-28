@@ -1,25 +1,26 @@
+use std::collections::BTreeMap;
+
 use color_eyre::Result;
 use k8s_openapi::api::core::v1::{Node, Pod};
-use kube::{api::ListParams, Api};
+use kube_quantity::ParsedQuantity;
 
 use crate::scheduler::{
-    bind_pod_to_node,
     filters::{
         is_node_schedulable, is_pod_affinity_fulfilled, is_pod_allocatable,
         is_pod_anti_affinity_fulfilled, is_pod_taint_toleration_fulfilled,
     },
-    PodBindParameters, SchedulingParameters,
+    Reason, TargetState, WorldState,
 };
 
-pub(crate) async fn schedule(params: SchedulingParameters) -> Result<()> {
-    let SchedulingParameters {
+pub(crate) async fn schedule(params: WorldState) -> Result<TargetState> {
+    let WorldState {
+        nodes,
         unscheduled_pods,
-        scheduler_name,
-        client,
+        state,
     } = params;
 
-    // FIXME: This is just a dummy scheduler assigning to the first node in the nodes
-    // vector
+    let mut state: BTreeMap<String, Vec<Pod>> =
+        state.into_iter().map(|(k, v)| (k, v.items)).collect();
 
     // TODO: Sort unscheduled pods
     // Potentially make use of priority classes here
@@ -50,16 +51,14 @@ pub(crate) async fn schedule(params: SchedulingParameters) -> Result<()> {
         unscheduled_pods.into_iter().map(|(_, pod)| pod).collect()
     };
 
-    let nodes: Api<Node> = Api::all(client.clone());
+    let mut newly_unscheduled_pods: Vec<(Pod, Reason)> = vec![];
 
     for pod in unscheduled_pods {
         // Filter out unfeasible nodes
-        let feasible_nodes: Vec<Node> = nodes
-            .list(&ListParams::default())
-            .await?
-            .into_iter()
+        let feasible_nodes: Vec<&Node> = nodes
+            .iter()
             // Filter schedulable nodes
-            .filter(is_node_schedulable)
+            .filter(|node| is_node_schedulable(node))
             // Filter nodes that have enough allocatable resources for pod
             .filter(|node| is_pod_allocatable(node, &pod))
             // Filter nodes fulfilling taint toleration
@@ -69,33 +68,75 @@ pub(crate) async fn schedule(params: SchedulingParameters) -> Result<()> {
             // Filter nodes fulfilling anti-affinities
             .filter(|node| is_pod_anti_affinity_fulfilled(node, &pod))
             .collect();
-        // TODO: Score nodes
+
+        if feasible_nodes.is_empty() {
+            newly_unscheduled_pods.push((pod, Reason::NoFeasibleNode));
+            continue;
+        }
+
+        // Score nodes
+
+        // Score each feasible node based on the following criteria:
+        // - Number of pods on node
+        // - Resource availabilities on node
+        struct ScoreCriteria {
+            number_of_pods: u64,
+            resource_availabilities: BTreeMap<String, ParsedQuantity>,
+        }
+
+        let node_scores: Vec<(&Node, ScoreCriteria)> = feasible_nodes
+            .into_iter()
+            .filter_map(|node| {
+                let Some(node_name) = &node.metadata.name else { return None; };
+                let number_of_pods = state.get(node_name)?.len().try_into().ok()?;
+
+                let Some(node_status) = &node.status else { return None; };
+                let Some(allocatable) = &node_status.allocatable else { return None };
+
+                let resource_availabilities = allocatable
+                    .iter()
+                    .filter_map(|(k, v)| {
+                        let v = v.try_into().ok()?;
+
+                        Some((k.clone(), v))
+                    })
+                    .collect();
+
+                Some((
+                    node,
+                    ScoreCriteria {
+                        number_of_pods,
+                        resource_availabilities,
+                    },
+                ))
+            })
+            .collect();
+
         // TODO: Normalize scores
-        // TODO: Update custom state/cache of scheduled pods to nodes
 
-        let Some(node) = feasible_nodes.get(0) else { continue; };
-        let Some(node_name) = &node.metadata.name else { continue; };
+        // Normalize the scores of each node based on the following criteria:
+        // - Number of pods on node normalized by maximum amount of pods on node
+        // - Resource availabilities on node normalized by maximum resource availabilities on node
 
-        let Some(name) = pod.metadata.name else { continue };
-        let Some(namespace) = pod.metadata.namespace else { continue };
-
-        // Bind pod to node
-        let res = bind_pod_to_node(PodBindParameters {
-            client: client.clone(),
-            pod_name: name.clone(),
-            pod_namespace: namespace.clone(),
-            node_name: node_name.clone(),
-            scheduler_name: scheduler_name.clone(),
-        })
-        .await;
-
-        match res {
-            Ok(_) => tracing::info!("Assigned pod {namespace}/{name} to node {node_name}"),
-            Err(err) => {
-                tracing::error!("An error occurred while trying to bind pod to node: {err:?}")
-            }
-        };
+        // Update state of scheduled pods to nodes
+        let Some((node, _)) = node_scores.get(0) else {
+			newly_unscheduled_pods.push((pod, Reason::NoFeasibleNode));
+			continue;
+		};
+        let Some(node_name) = &node.metadata.name else {
+			newly_unscheduled_pods.push((pod, Reason::NodeName));
+			continue;
+		};
+        let Some(node_pods) = state.get_mut(node_name) else {
+			newly_unscheduled_pods.push((pod, Reason::NodePods));
+			// TODO: Potentially add a verbose error message
+			continue;
+		};
+        node_pods.push(pod);
     }
 
-    Ok(())
+    Ok(TargetState {
+        unscheduled_pods: newly_unscheduled_pods,
+        state,
+    })
 }
