@@ -27,7 +27,7 @@ jobs:
           command: install
           args: --locked cargo-about
       - run: cargo about generate about.hbs > docs/license.md
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: 3.x
       - run: pip install mkdocs-material
